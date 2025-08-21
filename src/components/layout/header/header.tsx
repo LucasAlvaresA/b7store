@@ -5,11 +5,8 @@ import { HeaderIcon } from "./headerIcon";
 import Link from "next/link";
 import { useState } from "react";
 import { HeaderSearch } from "./headerSearch";
+import { MenuItem } from "@/types/menuItem";
 
-type MenuItem = {
-    label: string;
-    href: string;
-};
 export function Header() {
     const menu: MenuItem[] = [
         { label: "Camisetas", href: "/categories/camisetas" },
