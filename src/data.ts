@@ -77,4 +77,18 @@ export const data = {
             liked: false,
         },
     ],
+    filters: {
+        tech: [
+            { id: "node", label: "Node" },
+            { id: "react", label: "React" },
+            { id: "rn", label: "React Native" },
+        ],
+        color: [
+            { id: "red", label: "Vermelho" },
+            { id: "blue", label: "Azul" },
+            { id: "green", label: "Verde" },
+            { id: "black", label: "Preto" },
+            { id: "white", label: "Branco" },
+        ],
+    },
 };
