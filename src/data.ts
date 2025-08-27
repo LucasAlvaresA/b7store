@@ -91,4 +91,15 @@ export const data = {
             { id: "white", label: "Branco" },
         ],
     },
+    product: {
+        id: 1,
+        label: "Camisa PHP",
+        images: [
+            "/assets/products/camiseta-php.png",
+            "/assets/products/camiseta-php-grafite.png",
+        ],
+        price: 19.9,
+        liked: false,
+        description: "Um exemplo de descrição para o produto",
+    },
 };

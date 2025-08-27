@@ -13,7 +13,7 @@ export default async function Page({ params, searchParams }: Props) {
     return (
         <div className="">
             <div className="text-gray-500 mb-6">
-                <Link href="/">Home</Link> &gt; Temporário
+                <Link href="/">Home</Link> &gt; Produtos
             </div>
 
             <ProductListFilter />
