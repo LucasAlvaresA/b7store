@@ -1,7 +1,10 @@
 "use client";
 
+import { setCartState } from "@/actions/setCartState";
+import { useCartStore } from "@/store/cart";
 import { ProductComplete } from "@/types/product";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 type Props = {
     product: ProductComplete;
@@ -10,7 +13,14 @@ type Props = {
 const sizes = ["P", "M", "G", "GG"];
 
 export const ProductDetails = ({ product }: Props) => {
-    const addToCart = () => {};
+    const cartStore = useCartStore((state) => state);
+
+    const addToCart = async () => {
+        cartStore.addItem({ productId: product.id, quantity: 1 });
+        const updatedCart = useCartStore.getState().cart;
+        await setCartState(updatedCart);
+        redirect("/cart");
+    };
 
     return (
         <div className="flex-1">
