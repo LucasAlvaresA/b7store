@@ -8,6 +8,7 @@ import { CartProductList } from "./cartProductList";
 import { init } from "next/dist/compiled/webpack/webpack";
 import { FinishPurchaseButton } from "./finishPurchaseButton";
 import Link from "next/link";
+import { ShippingBox } from "./shippingBox";
 
 type Props = {
     initialCartProducts: CartListItem[];
@@ -51,7 +52,7 @@ export const CartContainer = ({
                     <CartProductList initialList={initialCartProducts} />
                 </div>
                 <div className="flex-1 md:max-w-sm flex flex-col gap-4">
-                    {/*Info area */}
+                    <ShippingBox />
                     <div className="bg-white border border-gray-200 rounded-sm">
                         <div className="border-b border-gray-200 p-6 ">
                             <div className="flex justify-between items-center mb-5">
